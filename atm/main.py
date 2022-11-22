@@ -17,3 +17,24 @@ print("""
 """)
 
 print("Welcome to your bank account", user_name, end="\n\n")
+
+
+print("USER VERIFICATION INITIATED...\n")
+input_pin = int(input("Please enter your 4-digit PIN > "))
+num_of_tries = 3
+while (num_of_tries != 0):
+
+    if input_pin == user_pin:
+        print("\nUSER AUTHORIZED!🎊\n")
+        user_verification = True
+
+    else:
+        num_of_tries -= 1
+        print("PIN incorrect! Number of tries left - ",
+              num_of_tries, end="\n\n")
+
+else:
+    print("USER VERIFICATION FAILED! \n Exiting...")
+    user_verification = False
+    t.sleep(2)
+    print("Exited!\n\n")
