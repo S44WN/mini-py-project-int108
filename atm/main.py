@@ -33,8 +33,7 @@ while (num_of_tries != 0):
             print("\t\t1. Check Bank Balance 💵 ")
             print("\t\t2. Withdraw Money 💰 ")
             print("\t\t3. Deposit Money 💰 ")
-            print("\t\t4. Change PIN 🔑 ")
-            print("\t\t5. Account INFO 🧑‍🦰 ")
+            print("\t\t4. Account INFO 🧑‍🦰 ")
 
             choice = int(
                 input(f"\nHow may we serve u {user_name} (enter a choice) : "))
@@ -46,7 +45,7 @@ while (num_of_tries != 0):
                 print("You have been logged out. Thank you!\n\n")
                 break
 
-            elif choice in (1, 2, 3, 4, 5):
+            elif choice in (1, 2, 3, 4):
 
                 if choice == 1:
                     print("Loading Account Balance...")
@@ -103,24 +102,6 @@ while (num_of_tries != 0):
                         print("Cancelling transaction...")
                         t.sleep(1)
                         print("Transaction Cancelled!\n\n")
-
-                    break
-
-                elif choice == 4:
-                    print("Loading PIN Change...")
-                    t.sleep(1.5)
-
-                    pin_new = int(input("Enter your new PIN > "))
-
-                    print("Changing PIN to", pin_new)
-                    confirm = input("Confirm? Y/N > ")
-                    if confirm in ('Y', 'y'):
-                        user_pin = pin_new
-                        print("PIN changed successfully! \n\n")
-                    else:
-                        print("Cancelling PIN change...")
-                        t.sleep(1)
-                        print("Process Cancelled!\n\n")
 
                     break
 
