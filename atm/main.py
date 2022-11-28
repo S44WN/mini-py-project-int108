@@ -1,10 +1,12 @@
 import time as t
 
+# defing needed variables
 user_balance = 97432.50
 user_name = "Mr John Doe"
 user_pin = 1234
 user_verification = False
 
+# prining the ASCII art
 print("""
 \n
 \t\t\t         _             
@@ -16,18 +18,22 @@ print("""
 \n
 """)
 
+# printing the welcome message
 print("Welcome to your bank account", user_name, end="\n\n")
 
-
+# user verification
 print("USER VERIFICATION INITIATED...\n")
 input_pin = int(input("Please enter your 4-digit PIN > "))
 num_of_tries = 3
+
+
 while (num_of_tries != 0):
 
     if input_pin == user_pin:
         print("\nUSER AUTHORIZED!🎊\n")
         user_verification = True
 
+        # printing the menu
         while (user_verification == True):
             print("\t\t0. Logout and Exit")
             print("\t\t1. Check Bank Balance 💵 ")
